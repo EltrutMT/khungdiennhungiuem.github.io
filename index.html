@@ -9,23 +9,70 @@
         html, body {
             margin:0;
             background-color:blue;
+            
         }
-        .hinh {
-            object-fit:;
+        .head{
+            width: 100%;
+            overflow: auto;
+            
         }
-        img {
+        #left{
+            width: 50%;
+            float: left;
+            
+            
+        }
+        #right{
+            width: 50%;
+            float: right;
+            
+        }
+        #hinh {
+        
             display: block;
             margin-top: 50%;
             margin-left: auto;
             margin-right: auto;
-            width: 100%;
+            width: 50%;
             
         }
+        #hinh1 {
+            
+        
+          
+            width: 30%;
+        }
+        #hinh2 {
+          
+            float: right;
+            width: 30%;
+        }
+        
+
     </style>
 </head>
 <body>
-    <div class="hinh"><img src="heart.png" alt="tim"></div>
+    <script language ="javascript">
+        function change_heart()
+        {
+            document.getElementById("hinh").style.width = '100%';
+
+        }
+    </script>
+    <div class="head">
+        <div id="left">
+            <img id="hinh1" src="smallheart1.png" alt="tim" onclick="change_heart()">
+        </div>
+        <div id="right" >
+            <img id="hinh2" src="smallheart2.png" alt="tim" onclick="change_heart()">
+            
+        </div>
         
+    </div>
+    
+    <img id="hinh" src="heart.png" alt="tim" onclick="change_heart()">
+
+
 
 </body>
 </html>
