@@ -8,8 +8,21 @@
     <style>
         html, body {
             margin:0;
-            background-color:blue;
+            background-color:plum;
             
+        }
+        #den{
+            display: none;
+            position: absolute;
+            width: 100%;
+            background-color: rgb(255, 187, 246);
+            height:1000px;
+            opacity: 0.5;
+            animation: mymove 0.5s linear;
+        }
+        @keyframes mymove {
+            0%,100% { opacity: 1 ;}
+            50% { opacity: 0.2 ;}
         }
         .head{
             width: 100%;
@@ -17,11 +30,14 @@
             
         }
         .body{
-            
+            color: crimson;
+            font-size: 140%;
+            text-align: center;
             width: 100%;
         }
+
         .foot{
-            margin-top: 70%;
+            margin-top: 50%;
             width: 100%;
         }
         #left{
@@ -75,31 +91,56 @@
 </head>
 <body>
     <script language ="javascript">
-        function change_heart()
+        function change_heart1()
         {
-            document.getElementById("hinh").style.width = '100%';
+            document.getElementById("hinh").style.width = '60%';
+            document.getElementById("hinh1").style.display = 'none';
 
         }
+        function change_heart2()
+        {
+            document.getElementById("hinh").style.width = '70%';
+            document.getElementById("hinh2").style.display = 'none';
+        }
+        function change_heart4()
+        {
+            document.getElementById("hinh").style.width = '85%';
+            document.getElementById("hinh4").style.display = 'none';
+        }
+        function change_heart3()
+        {
+            document.getElementById("hinh").style.width = '100%';
+            document.getElementById("hinh3").style.display = 'none';
+        }
+        function change_heart()
+        {
+            
+            
+            document.getElementById("den").style.display = 'block';
+            
+        }
     </script>
+    <div id="den" ></div>
     <div class="head">
         <div id="left">
-            <img id="hinh1" src="smallheart1.png" alt="tim" onclick="change_heart()">
+            <img id="hinh1" src="smallheart1.png" alt="tim" onclick="change_heart1()">
         </div>
         <div id="right" >
-            <img id="hinh2" src="smallheart2.png" alt="tim" onclick="change_heart()">
+            <img id="hinh2" src="smallheart2.png" alt="tim" onclick="change_heart2()">
             
         </div>
         
     </div>
     <div class="body">
         <img id="hinh" src="heart.png" alt="tim" onclick="change_heart()">
+        <p>Bé hãy ấn vào từng trái tim theo chiều kim đồng hồ </p>
     </div>
     <div class="foot">
         <div id="left">
-            <img id="hinh3" src="smallheart1.png" alt="tim" onclick="change_heart()">
+            <img id="hinh3" src="smallheart1.png" alt="tim" onclick="change_heart3()">
         </div>
         <div id="right" >
-            <img id="hinh4" src="smallheart2.png" alt="tim" onclick="change_heart()">
+            <img id="hinh4" src="smallheart2.png" alt="tim" onclick="change_heart4()">
             
         </div>
     
