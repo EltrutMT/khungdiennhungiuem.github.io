@@ -120,29 +120,33 @@
         {
             document.getElementById("hinh").style.width = '60%';
             document.getElementById("hinh1").style.display = 'none';
-
+            document.getElementById("be").innerHTML='Giờ là phải trên';
         }
         function change_heart2()
         {
             document.getElementById("hinh").style.width = '70%';
             document.getElementById("hinh2").style.display = 'none';
+            document.getElementById("be").innerHTML='Phải dưới nào';
         }
         function change_heart4()
         {
             document.getElementById("hinh").style.width = '85%';
             document.getElementById("hinh4").style.display = 'none';
+
+            document.getElementById("be").innerHTML='Tiếp theo là trái dưới';
         }
         function change_heart3()
         {
             document.getElementById("hinh").style.width = '100%';
             document.getElementById("hinh3").style.display = 'none';
+            document.getElementById("be").innerHTML='Cuối cùng hay ấn vào tim to nhất nèeee';
         }
         function change_heart()
         {
             
             document.getElementById("den").style.display = 'block';
             document.getElementById("mo").style.display = 'block';
-            
+            document.getElementById("be").innerHTML='';
         }
     </script>
     <div id="mo">
@@ -168,7 +172,7 @@
     </div>
     <div class="body">
         <img id="hinh" src="heart.png" alt="tim" onclick="change_heart()">
-        <p>Bé hãy ấn vào từng trái tim theo chiều kim đồng hồ </p>
+        <p id="be">Bé hãy ấn vào trái tim góc trái trên </p>
     </div>
     <div class="foot">
         <div id="left">
